@@ -17,4 +17,10 @@ class PatientsController < ApplicationController
 		@patients.save
 		redirect_to @patients
 	end
+	def destroy
+		@patients = Patient.find(params[:id])
+		@patients.destroy
+
+		redirect_to :back
+	end
 end
