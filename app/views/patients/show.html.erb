@@ -1,0 +1,22 @@
+<h1> Thank you for your submission </h1>
+
+<table class = "table">
+	<tr>
+	<th>Name</th>
+	<th>Number</th>
+	<th>Email</th>
+	<th>Current Appointment</th>
+	<th>Description</th>
+	<th>Dental Image</th>
+	</tr>
+
+	<tr>
+	  <td><%= @patients.name %></td>
+	  <td><%= @patients.number %></td>
+	  <td><%= @patients.email %></td>
+	  <td><%= @patients.appointment %></td>
+	  <td><%= @patients.description %></td>
+	  <td><%= image_tag @patients.avatar.url(:thumb) %></td>
+	</tr>
+
+</table>

@@ -1,0 +1,27 @@
+<h1>Listing patients</h1>
+ 
+<table class = "table">
+  <tr>
+    <th>Name</th>
+    <th>Number</th>
+    <th>Email</th>
+    <th>Current Appointment</th>
+    <th>Description</th>
+    <th>Dental Image</th>
+    <th>Remove</th>
+  </tr>
+ 
+  <% @patients.each do |patients| %>
+    <tr>
+      <td><%= patients.name %></td>
+      <td><%= patients.number %></td>
+      <td><%= patients.email %></td>
+      <td><%= patients.appointment %></td>
+      <td><%= patients.description %></td>
+      <td><%= image_tag patients.avatar.url(:thumb) %></td>
+      <td><%= link_to 'Delete', patient_path(patients),
+        method: :delete,
+        data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+  <% end %>
+</table>
