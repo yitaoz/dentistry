@@ -4,7 +4,6 @@ class CreatePatients < ActiveRecord::Migration
       t.string :name
       t.integer :number
       t.date :appointment
-
       t.timestamps
     end
   end

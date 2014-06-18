@@ -1,10 +1,11 @@
 DentistrySite::Application.routes.draw do
-  get "rails/generage"
-  get "rails/controller"
-  get "rails/Pages"
   get "rails/home"
   get "rails/success"
   get "rails/view"
+
+  resources :patients
+
+  root 'patients#new'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

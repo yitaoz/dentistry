@@ -1,0 +1,14 @@
+<p>
+  <strong>Name:</strong>
+  <%= @patients.name %>
+</p>
+ 
+<p>
+  <strong>Number:</strong>
+  <%= @patients.number %>
+</p>
+
+<p>
+	<strong>Avatar:</strong>
+	<%= image_tag @patients.avatar.url(:large) %>
+</p>

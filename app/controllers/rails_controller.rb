@@ -1,8 +1,4 @@
 class RailsController < ApplicationController
-
-  def Pages
-  end
-
   def home
   end
 
