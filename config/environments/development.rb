@@ -27,12 +27,4 @@ DentistrySite::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
-  config.paperclip_defaults = {
-  :storage => :s3,
-  :s3_credentials => {
-    :bucket => ENV['dentistryid'],
-    :access_key_id => ENV['AKIAJYJOILFF3A6DHKHQ'],
-    :secret_access_key => ENV['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']
-  }
-}
 end
