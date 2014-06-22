@@ -4,7 +4,7 @@ class Patient < ActiveRecord::Base
 	:path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
 	:url => "/system/:attachment/:id/:basename_:style.:extension",
 	:storage => :s3,
-	:bucket => 'dentistryid',
+	:bucket => 'dentistrysg',
 	:s3_credentials => S3_CREDENTIALS,
 	:styles => {
 	  :thumb    => ['100x100#',  :jpg, :quality => 70],

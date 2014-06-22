@@ -1,9 +1,10 @@
 development:
-  access_key_id: k/p1F5r05YNCsXHJfAEN089Zwu2aU2EemRu919QC
-  secret_access_key: AKIAJYJOILFF3A6DHKHQ
-  bucket: dentistryid
+  access_key_id: AKIAI66K3PXBKGLG54UA
+  secret_access_key: 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
+  bucket: dentistrysg
+
 
 production:
-  access_key_id: k/p1F5r05YNCsXHJfAEN089Zwu2aU2EemRu919QC
-  secret_access_key: AKIAJYJOILFF3A6DHKHQ
-  bucket: dentistryid
+  access_key_id: AKIAI66K3PXBKGLG54UA
+  secret_access_key: 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
+  bucket: dentistrysg
