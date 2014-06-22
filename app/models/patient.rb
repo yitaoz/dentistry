@@ -1,9 +1,11 @@
 class Patient < ActiveRecord::Base
 
 	has_attached_file :avatar, 
+	:path => ":rails_root/public/system/:attachment/:id/:basename_:style.:extension",
+	:url => "/system/:attachment/:id/:basename_:style.:extension",
 	:storage => :s3,
+	:bucket => 'dentistryid',
 	:s3_credentials => S3_CREDENTIALS,
-
 	:styles => {
 	  :thumb    => ['100x100#',  :jpg, :quality => 70],
 	  :preview  => ['480x480#',  :jpg, :quality => 70],

@@ -1,0 +1,9 @@
+development:
+  access_key_id: k/p1F5r05YNCsXHJfAEN089Zwu2aU2EemRu919QC
+  secret_access_key: AKIAJYJOILFF3A6DHKHQ
+  bucket: dentistryid
+
+production:
+  access_key_id: k/p1F5r05YNCsXHJfAEN089Zwu2aU2EemRu919QC
+  secret_access_key: AKIAJYJOILFF3A6DHKHQ
+  bucket: dentistryid
