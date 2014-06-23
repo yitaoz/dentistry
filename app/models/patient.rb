@@ -5,7 +5,10 @@ class Patient < ActiveRecord::Base
 	:url => "/system/:attachment/:id/:basename_:style.:extension",
 	:storage => :s3,
 	:bucket => 'dentistrysg',
-	:s3_credentials => S3_CREDENTIALS,
+	:s3_credentials => {
+		    access_key_id: ENV['AWS_ACCESS_KEY_ID'],
+    secret_access_key: ENV['AWS_SECRET_ACCESS_KEY'],
+		},
 	:styles => {
 	  :thumb    => ['100x100#',  :jpg, :quality => 70],
 	  :preview  => ['480x480#',  :jpg, :quality => 70],
