@@ -22,7 +22,7 @@ DentistrySite::Application.configure do
   # Disable Rails's static asset server (Apache or nginx will already do this).
   config.serve_static_assets = true
 
-config.paperclip.defaults = {
+config.paperclip_defaults = {
     storage: :s3,
     s3_host_name: 's3-eu-west-2.amazonaws.com',
     s3_credentials: {
