@@ -1,4 +1,7 @@
 class PatientsController < ApplicationController
+
+	before_filter :authenticate, :except => [:new, :create]
+
 	def index
    		@patients = Patient.all
   	end
