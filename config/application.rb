@@ -22,6 +22,8 @@ module DentistrySite
     # config.i18n.default_locale = :de
      config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
+
+
 config.paperclip_defaults = {
     :storage => :s3,
     :s3_host_name => 's3-us-west-2.amazonaws.com'

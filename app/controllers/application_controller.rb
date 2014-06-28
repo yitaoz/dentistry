@@ -1,4 +1,5 @@
 class ApplicationController < ActionController::Base
+	require 'digest/sha1' 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -13,7 +14,7 @@ class ApplicationController < ActionController::Base
 	private
 	def authenticate
 	  login = authenticate_or_request_with_http_basic do |username, password|
-	    username == "username" && password == "password"
+	    username == 'username' && password == 'password'
 	  end
 	  session[:login] = login
 	end

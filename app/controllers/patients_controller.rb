@@ -1,6 +1,6 @@
 class PatientsController < ApplicationController
 
-	before_filter :authenticate, :except => [:new, :create]
+	before_filter :authenticate, :except => [:new, :create, :show]
 
 	def index
    		@patients = Patient.all
