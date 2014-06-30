@@ -8,10 +8,28 @@ html {
 }
 
 body {
-  padding-top: 60px;
+margin: 0px;
+padding: 0px;
   background-image : url('/assets/main_bg.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
+}
+.container{
+background: rgba(10, 10, 0, 0.25);
+width: 100%;
+padding: 0px;
+
+margin: 0 auto;
+left: 0px;
+right: 0px;
+}
+.layer {
+	margin: 0 auto;
+    
+    height: auto;
+    width: 96%;
+    padding: 2%;
+    max-width: 1000px;
 }
 
 section {
@@ -33,6 +51,7 @@ h1 {
   letter-spacing: -2px;
   margin-bottom: 30px;
   text-align: left;
+  color: #f6f6f6;
 }
 
 h2 {
@@ -40,7 +59,7 @@ h2 {
   letter-spacing: -1px;
   margin-bottom: 30px;
   font-weight: normal;
-  color: #999;
+  color: #d9d9d9;
 }
 
 p {
@@ -69,14 +88,17 @@ p {
 
 
 .form {
-  float: right;
+	margin-top: 5%;
+	margin-left: 5%;
+  float: left;
   width:30%;
+  color: #f6f6f6;
 }
 
 .title {
-  padding-top: 10%;
+  margin-top: 50px;
   float: left;
-  width:50%;
+  width: 50%;
 }
 
 .form-label {
@@ -91,13 +113,4 @@ p {
 
 .prompt {
   font-size:0.8em;
-}
-
-.layer {
-    background-color: rgba(248, 247, 216, 0.7);
-    position: absolute;
-    top: 10%;
-    width: 100%;
-    margin: auto;
-    padding: 20px;
 }
