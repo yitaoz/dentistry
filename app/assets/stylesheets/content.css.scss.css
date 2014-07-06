@@ -77,7 +77,8 @@
 }
 
 .icon-close::before {
-	content: "\e601";
+	font-size: 2em;
+	content: "x";
 }
 
 .icon-play::before {
@@ -90,8 +91,9 @@
 
 .icon-close {
 	position: absolute;
-	top: 20px;
-	right: 20px;
+	top: 10px;
+	right: 60px;
+	width: 50px;
 }
 
 .icon-close:hover {

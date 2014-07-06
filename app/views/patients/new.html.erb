@@ -1,37 +1,33 @@
 
-<section>
+<section id="splash">
 		<div class = "title">
-			<h1 id="mainh1">Dental Now ASDF</h1>
+			<h1 id="mainh1">Dental Now</h1>
 			<h2 id="mainh2">
-			Skip the dental waiting line! Sign up now to schedule your dental appointment with a dental student
+			You don't have to wait for good teeth.
 			</h2>
 		</div>
 
 
 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
-						<button type="button">Signup</button>
+						<button type="button" class="butt">Sign-up now</button>
 						<div class="morph-content">
 							<div>
 								<div class="content-style-form content-style-form-2">
-									<span class="icon icon-close">Close the dialog</span>
-									<h2 id ="signup">Sign Up</h2>
+									<span class="icon-close"></span>
+									<h2 id ="signup">Sign-Up</h2>
 								
 									<%= form_for @patients do |f| %>
 										<div class = "form-group">
-											<%= f.label :name, "Your Name", :class => "form-label" %>
-											<%= f.text_field :name, :class => "form-input" %>
+											<%= f.text_field :name, :class => "form-input", :placeholder => "Name"%>
 										</div>
 										<div class = "form-group">
-											<%= f.label :number, "Phone Number", :class => "form-label"%>
-											<%= f.text_field :number, :class => "form-input" %>
+											<%= f.text_field :number, :class => "form-input", :placeholder => "Number"%>
 										</div>
 										<div class = "form-group">
-											<%= f.label :email, "Email", :class => "form-label" %>
-											<%= f.text_field :email, :class => "form-input" %>
+											<%= f.text_field :email, :class => "form-input", :placeholder => "hello@mail.com"%>
 										</div>
 										<div class = "form-group">
-											<%=f.label :appointment, "Date of Current SingHealth Appointment", :class => "form-label" %>
-											<%=f.date_field :appointment, :class => "form-input" %>
+											<%=f.date_field :appointment, :class => "form-input", :placeholder => "placeholder text"%>
 										</div>
 										<div class = "form-group">
 											<%=f.label :avatar, "Dental Images (optional)", :class => "form-label" %>
@@ -53,20 +49,45 @@
 					</div><!-- morph-button -->
 				</div><!-- /form-mockup -->
 			</section>
-			<section>
-				<h3>About Us</h3>
+<section id="about">
+<h3>About Us</h3>
 <p>
-- Current waiting time of 2 weeks compared to 3 - 6 months for public dental care
-- Supervised by specialists with average x years of experience
-- Cheap ($30 bux vs. $300)
+We are dentists too.
 </p>
-
-			</section>
-			<section>
+<div id="iconwrap" class="clearfix">
+	<div class="icons moolah">
+	  <a class="first-link" href="">
+	   
+	  </a>
+	  <a class="second" href="">
+	    Cheap ($30 bux vs. $300)
+	  </a>
+	</div>
+	<div class="icons time">
+	  <a class="first-link" href="">
+	    
+	  </a>
+	  <a class="second" href="">
+	   Current waiting time of 2 weeks compared to 3 - 6 months for public dental care
+	  </a>
+	</div>
+	<div class="icons quality">
+	  <a class="first-link" href="">
+	   
+	  </a>
+	  <a class="second" href="">
+	    Supervised by specialists with average x years of experience
+	  </a>
+	</div>
+</div>
+</section>
+			<section id="contact">
 				<h3>Contact Us</h3>
 
 				<p>You may email us at: <a href="mailto:zhangyitao91@gmail.com?subject=hello">zhangyitao91@gmail.com</a></p>
-				<p>or call us at <a href="tel://">9999999</a></p>
+				<p>or call us at <a href="tel://">+65 9777 7777</a>
+				</p>
+				<p></p>
 			</section>
 		
 		<script src="js/classie.js"></script>
