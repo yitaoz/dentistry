@@ -1,44 +1,138 @@
-<div class="container">
-	<div class = "layer clearfix">
+
+<section>
 		<div class = "title">
-			<h1>Dental Now ASDF</h1>
-			<h2>
+			<h1 id="mainh1">Dental Now ASDF</h1>
+			<h2 id="mainh2">
 			Skip the dental waiting line! Sign up now to schedule your dental appointment with a dental student
 			</h2>
 		</div>
 
 
-		<div class = "form">
-			<%= form_for @patients do |f| %>
-				<div class = "form-group">
-					<%= f.label :name, "Your Name", :class => "form-label" %>
-					<%= f.text_field :name, :class => "form-input" %>
-				</div>
-				<div class = "form-group">
-					<%= f.label :number, "Phone Number", :class => "form-label"%>
-					<%= f.text_field :number, :class => "form-input" %>
-				</div>
-				<div class = "form-group">
-					<%= f.label :email, "Email", :class => "form-label" %>
-					<%= f.text_field :email, :class => "form-input" %>
-				</div>
-				<div class = "form-group">
-					<%=f.label :appointment, "Date of Current SingHealth Appointment", :class => "form-label" %>
-					<%=f.date_field :appointment, :class => "form-input" %>
-				</div>
-				<div class = "form-group">
-					<%=f.label :avatar, "Dental Images (optional)", :class => "form-label" %>
-					<%=f.file_field :avatar, :class => "form-input" %>
-					<p class = "prompt">Please take a clearly visible picture of your teeth with the relevant problem</p>
-				</div>
-				<div class = "form-group">
-					<%= f.label :description, "Please Describe your Symptoms", :class => "form-label" %>
-					<%= f.text_area :description, size: "60x6", :class => "form-input" %>
-				</div>
-				<p>
-					<%= f.submit "Submit", class: "btn btn-primary" %>
-				</p>
-			<% end %>
-		</div>
-	</div>
-</div>
+					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+						<button type="button">Signup</button>
+						<div class="morph-content">
+							<div>
+								<div class="content-style-form content-style-form-2">
+									<span class="icon icon-close">Close the dialog</span>
+									<h2 id ="signup">Sign Up</h2>
+								
+									<%= form_for @patients do |f| %>
+										<div class = "form-group">
+											<%= f.label :name, "Your Name", :class => "form-label" %>
+											<%= f.text_field :name, :class => "form-input" %>
+										</div>
+										<div class = "form-group">
+											<%= f.label :number, "Phone Number", :class => "form-label"%>
+											<%= f.text_field :number, :class => "form-input" %>
+										</div>
+										<div class = "form-group">
+											<%= f.label :email, "Email", :class => "form-label" %>
+											<%= f.text_field :email, :class => "form-input" %>
+										</div>
+										<div class = "form-group">
+											<%=f.label :appointment, "Date of Current SingHealth Appointment", :class => "form-label" %>
+											<%=f.date_field :appointment, :class => "form-input" %>
+										</div>
+										<div class = "form-group">
+											<%=f.label :avatar, "Dental Images (optional)", :class => "form-label" %>
+											<%=f.file_field :avatar, :class => "form-input" %>
+											<p class = "prompt">Please take a clearly visible picture of your teeth with the relevant problem</p>
+										</div>
+										<div class = "form-group">
+											<%= f.label :description, "Please Describe your Symptoms", :class => "form-label" %>
+											<%= f.text_area :description, size: "60x6", :class => "form-input" %>
+										</div>
+										<p>
+											<%= f.submit "Submit", class: "btn btn-primary" %>
+										</p>
+									<% end %>
+									
+								</div>
+							</div>
+						</div>
+					</div><!-- morph-button -->
+				</div><!-- /form-mockup -->
+			</section>
+			<section>
+				<h3>About Us</h3>
+<p>
+- Current waiting time of 2 weeks compared to 3 - 6 months for public dental care
+- Supervised by specialists with average x years of experience
+- Cheap ($30 bux vs. $300)
+</p>
+
+			</section>
+			<section>
+				<h3>Contact Us</h3>
+
+				<p>You may email us at: <a href="mailto:zhangyitao91@gmail.com?subject=hello">zhangyitao91@gmail.com</a></p>
+				<p>or call us at <a href="tel://">9999999</a></p>
+			</section>
+		
+		<script src="js/classie.js"></script>
+		<script src="js/uiMorphingButton_fixed.js"></script>
+		<script>
+			(function() {
+				var docElem = window.document.documentElement, didScroll, scrollPosition;
+
+				// trick to prevent scrolling when opening/closing button
+				function noScrollFn() {
+					window.scrollTo( scrollPosition ? scrollPosition.x : 0, scrollPosition ? scrollPosition.y : 0 );
+				}
+
+				function noScroll() {
+					window.removeEventListener( 'scroll', scrollHandler );
+					window.addEventListener( 'scroll', noScrollFn );
+				}
+
+				function scrollFn() {
+					window.addEventListener( 'scroll', scrollHandler );
+				}
+
+				function canScroll() {
+					window.removeEventListener( 'scroll', noScrollFn );
+					scrollFn();
+				}
+
+				function scrollHandler() {
+					if( !didScroll ) {
+						didScroll = true;
+						setTimeout( function() { scrollPage(); }, 60 );
+					}
+				};
+
+				function scrollPage() {
+					scrollPosition = { x : window.pageXOffset || docElem.scrollLeft, y : window.pageYOffset || docElem.scrollTop };
+					didScroll = false;
+				};
+
+				scrollFn();
+
+				[].slice.call( document.querySelectorAll( '.morph-button' ) ).forEach( function( bttn ) {
+					new UIMorphingButton( bttn, {
+						closeEl : '.icon-close',
+						onBeforeOpen : function() {
+							// don't allow to scroll
+							noScroll();
+						},
+						onAfterOpen : function() {
+							// can scroll again
+							canScroll();
+						},
+						onBeforeClose : function() {
+							// don't allow to scroll
+							noScroll();
+						},
+						onAfterClose : function() {
+							// can scroll again
+							canScroll();
+						}
+					} );
+				} );
+
+				// for demo purposes only
+				[].slice.call( document.querySelectorAll( 'form button' ) ).forEach( function( bttn ) { 
+					bttn.addEventListener( 'click', function( ev ) { ev.preventDefault(); } );
+				} );
+			})();
+		</script>

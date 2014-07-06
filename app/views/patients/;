@@ -1,0 +1,63 @@
+Searching 209 files for "morph-button-modal-3"
+
+/Users/Yitao/Documents/Business/Dental/DentistrySite/app/assets/stylesheets/component.css.scss.css:
+  171  
+  172  .morph-button.morph-button-modal-2,
+  173: .morph-button.morph-button-modal-3 {
+  174  	display: inline-block;
+  175  	margin: 0 auto;
+  ...
+  182  
+  183  .morph-button-modal-2 > button,
+  184: .morph-button-modal-3 > button{
+  185  	background: none;
+  186  	border: 4px solid #f6f6f6;
+  187  	font-size: 2em;
+  188  }
+  189: .morph-button-modal-2 .morph-content, .morph-button-modal-3 .morph-content {
+  190  	background: #f6f6f6;
+  191  	color: #1c1c1c;
+  ...
+  235  }
+  236  
+  237: .morph-button-modal-3.open .morph-content {
+  238  	margin: 0 auto;
+  239  	width: 420px;
+  ...
+  241  }
+  242  
+  243: .morph-button-modal-3.open .morph-content > div {
+  244  	height: auto;
+  245  }
+  246  
+  247  .morph-button-modal-2.open .morph-content > div,
+  248: .morph-button-modal-3.open .morph-content > div {
+  249   	-webkit-transition: opacity 0.3s 0.3s;
+  250  	transition: opacity 0.3s 0.3s;
+
+/Users/Yitao/Documents/Business/Dental/DentistrySite/app/views/patients/new.html.erb:
+    9  
+   10  
+   11: 					<div class="morph-button morph-button-modal morph-button-modal-3 morph-button-fixed">
+   12  						<button type="button">Signup</button>
+   13  						<div class="morph-content">
+
+~/Documents/Business/Dental/DentistrySite/tmp/cache/assets/development/sass/2ca5d627c0bfbd094e190d32dba630a9728b0f9f/component.css.scss.cssc:
+    <binary>
+
+~/Documents/Business/Dental/DentistrySite/tmp/cache/assets/development/sprockets/13fe41fee1fe35b49d145bcc06610705:
+    <binary>
+
+~/Documents/Business/Dental/DentistrySite/tmp/cache/assets/development/sprockets/28e40ef6282f188b70fa08a3d30ab8fd:
+    <binary>
+
+~/Documents/Business/Dental/DentistrySite/tmp/cache/assets/development/sprockets/2f6db0fcd7133d6d52a9af8a50681a4b:
+    <binary>
+
+~/Documents/Business/Dental/DentistrySite/tmp/cache/assets/development/sprockets/357970feca3ac29060c1e3861e2c0953:
+    <binary>
+
+~/Documents/Business/Dental/DentistrySite/tmp/cache/assets/development/sprockets/d924215dca2968707f61983e8769697a:
+    <binary>
+
+55 matches across 8 files
